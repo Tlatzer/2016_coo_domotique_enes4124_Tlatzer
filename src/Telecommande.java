@@ -9,7 +9,7 @@ public class Telecommande {
     /**
      * liste des lampes controlées par la télécommande
      */
-    private List<Lampe> lampes;
+    private ArrayList<Lampe> lampes;
 
 
 
@@ -18,7 +18,7 @@ public class Telecommande {
      */
     public Telecommande(){
 
-        throw new error("Pas rempli");
+        this.lampes = new ArrayList<Lampe>();
 
     }
 
@@ -28,29 +28,57 @@ public class Telecommande {
      */
     public void ajouterLampe(Lampe pLampe){
 
-        throw new error("Pas rempli");
+        this.lampes.add(pLampe);
 
     }
 
     /**
-     *
+     * effectue l'opération correspondante sur la lampe de la télécommande à l'indice indiceLampe
+     * @param indiceLampe 
      */
     public void activerLampe(int indiceLampe){
 
-        throw new error("Pas rempli");
+        for(int i = 0; i < this.lampes.size(); i++){
+
+            if(this.lampes.get(i).isAllume() == true){
+
+                System.out.println("La lampe est déjà activée");
+
+            }else{this.lampes.get(i).allumer();}
+
+        }
+        
 
     }
 
 
     public void desactiverLampe(int indiceLampe){
 
-        throw new error("Pas rempli");
+        for(int i = 0; i < this.lampes.size(); i++){
+
+            if(this.lampes.get(i).isAllume() == false){
+
+                System.out.println("La lampe est déjà désactivée");
+
+            }else{this.lampes.get(i).eteindre();}
+
+        }
 
     }
 
     public void activerTout(){
 
-        throw new error("Pas rempli");
+        for(int i = 0; i < this.lampes.size(); i++){
+
+            this.lampes.get(i).allumer();
+
+        }
+
+    }
+
+    public String toString(){
+
+        return "La télécommande possède:" + this.lampes.size() + "lampes";
 
     }
 
