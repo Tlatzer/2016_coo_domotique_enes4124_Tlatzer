@@ -6,12 +6,13 @@ import libtest.*;
 public class TelecommandeTest{
 
     public static void main(String[] args) {
-
+      lancer(new TestDresseur(), args);
     }
 
     /**
       * Test qui ajoute une lampe a une telecommande vide
       */
+    @Test
     public void test_ajoutLampeVide(){
         Lampe l = new Lampe("Theo 1");
         Telecommande t = new Telecommande();
@@ -23,6 +24,7 @@ public class TelecommandeTest{
     /**
       * Test qui ajoute une lampe a une telecommande avec un element
       */
+    @Test
     public void test_ajoutLampeElement(){
         Lampe l1 = new Lampe("Lampe1");
         Lampe l2 = new Lampe("Lampe2");
@@ -37,6 +39,7 @@ public class TelecommandeTest{
     /**
       * Test qui active une lampe existante en position 0
       */
+    @Test
     public void test_ActiverExistLampe0(){
       Lampe l = new Lampe("Lampe1");
       Telecommande t = new Telecommande();
@@ -63,6 +66,7 @@ public class TelecommandeTest{
     /**
       * Test qui active une lampe inexistante
       */
+    @Test
     public void test_ActiverInexistLampe(){
       Telecommande t = new Telecommande();
       t.activerLampe(0);
