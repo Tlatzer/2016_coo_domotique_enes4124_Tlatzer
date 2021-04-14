@@ -21,7 +21,7 @@ public class Telecommande {
         throw new error("Pas rempli");
 
     }
-    
+
     /**
      * ajoute un lien dans la télécommande permettant de commander cette lampe
      * @param Lampe une lampe
@@ -31,9 +31,9 @@ public class Telecommande {
         throw new error("Pas rempli");
 
     }
-    
+
     /**
-     *  
+     *
      */
     public void activerLampe(int indiceLampe){
 
